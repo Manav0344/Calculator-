@@ -10,72 +10,91 @@
 body {
     width: 100%;
     height: 100vh;
+    background: linear-gradient(50deg, #0a0a0a, #3a4452);
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(50deg, #0a0a0a, #3a4452);
+    padding: 20px;
 }
 
 .calculater {
     border: 2px solid #717377;
-    padding: 30px;
     border-radius: 20px;
+    padding: 20px;
     background: transparent;
-    box-shadow: 0px 3px 15px rgba(113, 115, 117, 0.5);
+    box-shadow: 0 3px 15px rgba(113, 115, 117, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
 }
 
-input {
-    width: 310px;
-    border: none;
-    padding: 25px;
-    margin: 12px;
+#inputBox {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
     background: transparent;
-    box-shadow: 6px 3px 15px rgba(84, 84, 84, 0.5);
-    font-size: 45px;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    font-size: 36px;
     text-align: right;
-    cursor: pointer;
     color: white;
 }
 
-input::placeholder {
-    color: #ffffff;
+#inputBox::placeholder {
+    color: #ccc;
+}
+
+.calculater div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 button {
-    width: 70px;
+    width: 22%;
+    aspect-ratio: 1 / 1;
+    margin: 1%;
+    font-size: 20px;
     border: none;
-    height: 70px;
-    margin: 10px;
     border-radius: 50%;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.05);
     color: wheat;
-    font-size: 22px;
-    box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.1);
     cursor: pointer;
+    transition: 0.2s;
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.1),
+                4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.operater {
+    background-color: rgb(91, 102, 114);
 }
 
 .equalbtn {
     background-color: rgb(126, 84, 7);
 }
 
-.operater {
-    background: rgb(91, 102, 114);
-}
-
-@media (max-width: 500px) {
+/* ✅ Responsive tweaks */
+@media (max-width: 480px) {
     .calculater {
-        padding: 20px;
+        padding: 15px;
     }
 
-    input {
-        font-size: 35px;
-        padding: 20px;
+    #inputBox {
+        font-size: 28px;
+        padding: 15px;
     }
 
     button {
-        width: 55px;
-        height: 55px;
         font-size: 18px;
-        margin: 6px;
     }
 }
