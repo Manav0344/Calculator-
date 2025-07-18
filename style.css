@@ -61,3 +61,21 @@ button {
 .operater {
     background: rgb(91, 102, 114);
 }
+
+@media (max-width: 500px) {
+    .calculater {
+        padding: 20px;
+    }
+
+    input {
+        font-size: 35px;
+        padding: 20px;
+    }
+
+    button {
+        width: 55px;
+        height: 55px;
+        font-size: 18px;
+        margin: 6px;
+    }
+}
